@@ -1,0 +1,11 @@
+{
+  "name": "zayystore",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZayyStore — toko digital Minecraft dengan pembayaran QRIS otomatis (Kipay) di Vercel",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:real": "node scripts/dev.js --real"
+  }
+}

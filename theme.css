@@ -1,0 +1,75 @@
+/* ZayyStore — tampilan ala toko Minecraft (biru cerah, navbar melayang, kartu putih). Hanya tampilan; logika di script.js & checkout.js tidak berubah. */
+:root{--blue:#0a8de8;--blue2:#3db2ff;--navy:#0c2748}
+body{font-family:Poppins,Inter,system-ui,sans-serif;background:radial-gradient(1000px 520px at 50% -120px,#38b3ff,transparent),linear-gradient(#0a80d4,#0766b8 60%,#05509a);background-attachment:fixed;min-height:100vh}
+.sv-header{position:sticky;top:14px;z-index:30;max-width:1280px;margin:14px auto 0;width:calc(100% - 28px);height:68px;padding:0 14px 0 18px;display:flex;align-items:center;gap:16px;background:#0b2447db;backdrop-filter:blur(14px);border-radius:18px;border:1px solid #ffffff1a;box-shadow:0 12px 30px #00000038}
+.sv-brand{display:flex;align-items:center;gap:10px;color:#fff}.sv-brand b{font-family:"Lilita One",Poppins;font-size:24px;letter-spacing:.5px;font-weight:400}
+.sv-nav{display:flex;gap:6px;margin:0 auto}.sv-nav a{color:#fff;font-weight:600;font-size:15px;padding:9px 16px;border-radius:12px;transition:.2s}.sv-nav a:hover,.sv-nav a.active{background:#ffffff24}
+.sv-actions{display:flex;align-items:center;gap:8px}.sv-actions .icon-btn,.sv-actions .cart-btn{background:#ffffff1c;border:0;color:#fff;height:40px;border-radius:12px}.orders-btn{display:none}
+.sv-actions .login-btn{background:linear-gradient(180deg,#19b0ff,#0a8de8);height:40px;border-radius:12px;padding:0 18px;font-weight:700;font-size:14px;box-shadow:none}
+.sv-burger{display:none;background:#ffffff1c;color:#fff;font-size:20px;width:40px;height:40px;border-radius:12px}
+.sv-hero{max-width:980px;margin:54px auto 26px;padding:0 18px;text-align:center;color:#fff}
+.sv-pill{display:inline-block;background:#ffffff26;border:1px solid #ffffff40;color:#fff;font-size:11px;font-weight:700;letter-spacing:1.4px;padding:7px 14px;border-radius:30px}
+.sv-hero h1{font-family:"Lilita One",Poppins;font-weight:400;font-size:clamp(40px,7vw,84px);line-height:1.02;margin:18px 0 14px;text-shadow:0 5px 0 #0a4f92,0 10px 24px #0000003d}
+.sv-hero h1 em{font-style:normal;color:#ffd23f}.sv-hero p{font-size:16px;opacity:.92;margin:0 auto 24px;max-width:560px;line-height:1.7}
+.sv-cta{display:inline-block;background:#ffd23f;color:#3a2a00;font-weight:800;font-size:16px;padding:15px 34px;border-radius:14px;box-shadow:0 6px 0 #c99a00,0 14px 26px #0000003a;transition:.15s}.sv-cta:hover{transform:translateY(2px);box-shadow:0 4px 0 #c99a00}
+.sv-stats{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.sv-stats div{background:#ffffff1f;border:1px solid #ffffff38;border-radius:16px;padding:12px 24px;min-width:130px}.sv-stats b{display:block;font-size:22px}.sv-stats small{font-size:12px;opacity:.85}
+.sv-promo{max-width:1232px;width:calc(100% - 28px);margin:0 auto 34px;background:#ffd23f;color:#3a2a00;border-radius:14px;padding:11px 16px;text-align:center;font-weight:600;font-size:13px}.sv-promo strong{background:#0c2748;color:#fff;border-radius:20px;padding:4px 11px;margin-left:4px}
+.sv-section{max-width:1260px;margin:0 auto 54px;padding:0 14px}.sv-head{margin-bottom:20px}.sv-head h2{font-family:"Lilita One",Poppins;font-weight:400;font-size:36px;color:#fff;margin:12px 0 0;text-shadow:0 3px 0 #0a4f92}
+.sv-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.sv-tabs .filter{width:112px;height:92px;padding:0;border:0;border-radius:12px;background:#f1f8ff;color:#0a73c4;font-weight:600;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;position:relative;box-shadow:0 5px 0 #0a5aa3,0 10px 20px #0000002b;transition:.15s}
+.sv-tabs .filter i{font-style:normal;font-size:26px;line-height:1}.sv-tabs .filter:hover{transform:translateY(-2px)}
+.sv-tabs .filter.active{background:#0b4f8f;color:#fff;box-shadow:0 5px 0 #06355f,0 10px 20px #0000002b}.sv-tabs .filter.active:after{content:"";position:absolute;bottom:8px;width:44px;height:3px;border-radius:3px;background:#3db2ff}
+.sv-section .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:18px}
+.sv-section .product-grid .product-card:nth-child(n+4){display:block}
+.sv-card.product-card{background:#f1f8ff;border:0;border-radius:18px;box-shadow:0 14px 34px #00000030;overflow:hidden;transition:.22s}.sv-card.product-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px #0000004a}
+.sv-img{position:relative;aspect-ratio:1/.9;display:grid;place-items:center;overflow:hidden}.sv-img:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#ffffff80 1.5px,transparent 2px);background-size:28px 28px;opacity:.3}
+.g-account{background:linear-gradient(160deg,#4fd36a,#1aa0e6 58%,#0a6fd0)}.g-server{background:linear-gradient(160deg,#2ad8c8,#1590e6 58%,#0a5fc4)}.g-premium{background:linear-gradient(160deg,#a173ff,#3f7cf0 58%,#0a5fc4)}.g-coins{background:linear-gradient(160deg,#ffd23f,#2ea6f2 62%,#0a6fd0)}.g-rank{background:linear-gradient(160deg,#cf75ff,#4a7cf0 58%,#0a62c8)}
+.sv-tag{position:absolute;left:0;top:0;z-index:2;background:#f2b705;color:#fff;font-size:10.5px;font-weight:700;padding:6px 11px;border-radius:0 0 12px 0}
+.sv-off{position:absolute;right:0;top:0;z-index:2;background:#ff2d55;color:#fff;font-size:11px;font-weight:800;padding:6px 11px;border-radius:0 0 0 12px}
+.sv-art{position:relative;z-index:1;text-align:center;padding:8px}.sv-art i{display:block;font-style:normal;font-size:96px;line-height:1;filter:drop-shadow(0 8px 10px #0000004d);margin-bottom:6px}
+.sv-art b{display:block;font-family:"Lilita One",Poppins;font-weight:400;font-size:38px;line-height:.98;color:#ffd23f;-webkit-text-stroke:8px #17335f;paint-order:stroke fill;text-shadow:0 5px 0 #17335f;letter-spacing:1px}
+.sv-body{padding:16px 16px 18px}.sv-cat{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:20px;font-size:12px;font-weight:600;color:#fff}
+.sv-cat.green{background:#17b86a}.sv-cat.blue{background:#3b82f6}.sv-cat.purple{background:#7c5cff}.sv-cat.coin{background:#f5b000}.sv-cat.gold{background:#f08a00}
+.sv-body h3{font-size:17px;font-weight:700;color:#0e1a33;margin:13px 0 3px;line-height:1.3}.sv-body p{font-size:12.5px;color:#5d6c88;margin:0}
+.sv-meta{display:flex;align-items:center;gap:9px;margin:13px 0 8px;font-size:12px;color:#53627d;flex-wrap:wrap}.sv-meta b{font-weight:800;font-size:9.5px;line-height:1.05;color:#14a85f}.sv-fast{display:flex;align-items:center;gap:6px}.sv-fast u{text-decoration:none;display:grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#17b86a;color:#fff;font-size:12px}
+.sv-fast.fast b{color:#e98b00}.sv-fast.fast u{background:#f5a000}.sv-rate{color:#0e1a33;font-weight:600}.sv-sep{color:#c3cde0}
+.sv-price strong{display:block;font-size:27px;font-weight:700;color:#0b1b3a;margin-bottom:14px}
+.add-cart.sv-buy{width:100%;height:46px;border-radius:12px;background:linear-gradient(180deg,#19b0ff,#0a86d8);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 0 #0668ab;transition:.15s}.add-cart.sv-buy:hover{filter:brightness(1.08);transform:translateY(1px)}
+.sv-section .how-card{background:#f1f8ff;border:0;border-radius:18px;box-shadow:0 12px 26px #00000026}
+.newsletter{max-width:1232px;width:calc(100% - 28px);background:#f1f8ff;border:0;border-radius:18px;margin:0 auto 54px;box-shadow:0 12px 26px #00000026}
+.sv-footer{background:#082041;color:#b8c6e4;border-radius:26px 26px 0 0;max-width:1280px;margin:0 auto;padding:36px 32px 22px}
+.sv-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:34px}.sv-footer p{font-size:13px;line-height:1.8;margin:14px 0 0;max-width:300px}.sv-footer h4{color:#fff;font-size:15px;margin:0 0 12px}.sv-footer a:not(.sv-brand){display:block;font-size:13px;margin-bottom:9px;transition:.2s}.sv-footer a:not(.sv-brand):hover{color:#fff}
+.sv-footer .payment-pills span{background:#ffffff14;border:1px solid #ffffff1f;color:#dbe6ff;border-radius:8px;padding:5px 10px;font-size:11px}.sv-foot-bottom{border-top:1px solid #ffffff1a;margin-top:26px;padding-top:16px;font-size:12px;text-align:center}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;background:#1fbf5b;color:#fff;font-weight:700;font-size:17px;padding:11px 22px;border-radius:30px;border:3px solid #fff;box-shadow:0 0 0 3px #1fbf5b,0 12px 26px #0000004d;transition:.2s}.wa-float:hover{transform:translateY(-2px)}
+@media(max-width:900px){.sv-nav{display:none;position:absolute;top:76px;left:0;right:0;background:#0b2447;border-radius:16px;padding:10px;flex-direction:column;box-shadow:0 14px 30px #0000004d}.sv-nav.open{display:flex}.sv-burger{display:block}.sv-actions{margin-left:auto}.sv-foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sv-section .product-grid{grid-template-columns:repeat(2,1fr);gap:12px}.sv-body{padding:12px}.sv-body h3{font-size:14px}.sv-body p{display:none}.sv-price strong{font-size:19px;margin-bottom:10px}.sv-art i{font-size:62px}.sv-art b{font-size:24px;-webkit-text-stroke:6px #17335f}.add-cart.sv-buy{height:42px;font-size:13px}.sv-cat{font-size:10.5px;padding:4px 9px}.sv-tabs .filter{width:calc(25% - 9px);height:76px;font-size:11px}.sv-tabs .filter i{font-size:21px}.sv-head h2{font-size:28px}.sv-header{height:62px}.sv-brand b{font-size:20px}.sv-actions .icon-btn{display:none}.wa-float{font-size:14px;padding:9px 16px}.sv-footer{padding:28px 20px 18px}.sv-meta .sv-sep,.sv-meta span:last-child{display:none}}
+.sv-art svg{width:168px;height:134px;display:block;margin:0 auto 6px;overflow:visible;filter:drop-shadow(0 10px 8px #00000052)}
+@media(max-width:700px){.sv-art svg{width:112px;height:90px}}
+/* ===== Hero foto + efek bergerak ===== */
+.sv-hero{position:relative;overflow:hidden;max-width:none;width:100%;margin:-82px 0 0;padding:150px max(14px,calc((100% - 1260px)/2 + 14px)) 120px;min-height:600px;text-align:left;display:flex;align-items:center}
+.sv-hero-bg{position:absolute;inset:-4%;background:url(img/hero.jpg) center/cover;animation:kb 28s ease-in-out infinite alternate;-webkit-mask-image:linear-gradient(#000 52%,transparent 100%);mask-image:linear-gradient(#000 52%,transparent 100%)}
+.sv-hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06121fcc,#06121f55 55%,#06121f10)}
+.sv-rays{position:absolute;inset:0;z-index:1;background:linear-gradient(115deg,transparent 32%,#ffffff30 46%,transparent 60%);background-size:260% 100%;animation:ray 8s ease-in-out infinite;mix-blend-mode:soft-light;pointer-events:none;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.sv-bits{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.sv-bits i{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);background:#8fe6ff;box-shadow:0 0 10px #4fd3ff;opacity:0;animation:bit var(--d) linear var(--t) infinite}
+.sv-hero-in{position:relative;z-index:2;width:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.sv-hero h1{font-family:"Pixelify Sans","Lilita One",monospace;font-weight:700;font-size:clamp(34px,5.4vw,70px);line-height:1.1;letter-spacing:1px;margin:0;text-shadow:0 4px 0 #0008,0 10px 30px #0009}
+.sv-hero p{font-size:clamp(15px,1.6vw,19px);margin:16px 0 26px;max-width:none;text-shadow:0 2px 10px #000a}
+.sv-hero-copy>*{animation:up .9s cubic-bezier(.2,.8,.2,1) both}.sv-hero-copy p{animation-delay:.15s}.sv-hero-copy .sv-cta{animation-delay:.3s}
+.sv-hero .sv-cta{position:relative;overflow:hidden;background:linear-gradient(#19b0ff,#0a8de8);color:#fff;font-size:15px;letter-spacing:.5px;padding:14px 26px;border-radius:8px;box-shadow:0 5px 0 #0668ab,0 14px 26px #0000004d}
+.sv-hero .sv-cta:after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,#ffffff70,transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out 1s infinite}
+.sv-hero .sv-stats{margin:0;flex-wrap:nowrap;justify-content:flex-end}
+.sv-hero .sv-stats div{background:#ffffff1f;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid #ffffff59;border-radius:10px;min-width:112px;padding:14px 18px;text-align:center;color:#fff;animation:bob 4.5s ease-in-out infinite}
+.sv-hero .sv-stats div:nth-child(2){animation-delay:-1.5s}.sv-hero .sv-stats div:nth-child(3){animation-delay:-3s}
+.sv-hero .sv-stats b{font-size:21px}
+.sv-photo-bg{position:absolute;inset:-12%;width:124%;height:124%;object-fit:cover;filter:blur(14px) saturate(1.25) brightness(.85)}
+.sv-photo{position:relative;z-index:1;height:90%;width:auto;max-width:90%;object-fit:contain;border-radius:10px;box-shadow:0 14px 26px #0000005c;transition:transform .4s}.sv-card:hover .sv-photo{transform:scale(1.05)}
+@keyframes kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.2) translate(-2.5%,-2%)}}
+@keyframes ray{0%{background-position:150% 0}100%{background-position:-60% 0}}
+@keyframes bit{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-560px) rotate(200deg);opacity:0}}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+@media(max-width:900px){.sv-hero{min-height:520px;padding-top:130px;padding-bottom:90px}.sv-hero-in{flex-direction:column;align-items:flex-start}.sv-hero .sv-stats{justify-content:flex-start;flex-wrap:wrap}}
+@media(max-width:560px){.sv-hero .sv-stats div{min-width:0;flex:1;padding:10px 8px}.sv-hero .sv-stats b{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.sv-hero *,.sv-hero-bg,.sv-rays,.sv-photo{animation:none!important;transition:none!important}}
