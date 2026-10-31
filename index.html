@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c2748" />
+  <title>ZayyStore — Minecraft Digital Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lilita+One&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <header class="sv-header">
+    <a class="sv-brand" href="#home"><span class="brand-mark">Z</span><b>ZAYYSTORE</b></a>
+    <nav id="nav" class="sv-nav"><a class="active" href="#home">Beranda</a><a href="#" onclick="document.getElementById('ordersOpen').click();return false">Cek Pesanan</a><a href="#cara">Bantuan</a></nav>
+    <div class="sv-actions"><button class="icon-btn" id="searchToggle" aria-label="Cari">⌕</button><button class="cart-btn" id="cartOpen" aria-label="Keranjang">🛒 <span id="cartCount">0</span></button><button class="orders-btn" id="ordersOpen" aria-label="Pesanan saya">Pesanan</button><button class="login-btn" id="loginBtn">Login</button><button class="sv-burger" id="mobileMenu" aria-label="Buka menu">☰</button></div>
+  </header>
+  <main>
+    <section class="sv-hero" id="home">
+      <div class="sv-hero-bg" aria-hidden="true"></div><div class="sv-rays" aria-hidden="true"></div><div class="sv-bits" aria-hidden="true"><i style="--x:44%;--d:10s;--s:8px;--t:-10s"></i><i style="--x:9%;--d:9s;--s:4px;--t:-5s"></i><i style="--x:77%;--d:8s;--s:5px;--t:-0s"></i><i style="--x:14%;--d:14s;--s:8px;--t:-1s"></i><i style="--x:33%;--d:9s;--s:8px;--t:-0s"></i><i style="--x:75%;--d:9s;--s:5px;--t:-10s"></i><i style="--x:83%;--d:8s;--s:8px;--t:-0s"></i><i style="--x:31%;--d:8s;--s:5px;--t:-4s"></i><i style="--x:56%;--d:10s;--s:4px;--t:-9s"></i><i style="--x:42%;--d:10s;--s:4px;--t:-9s"></i><i style="--x:76%;--d:11s;--s:6px;--t:-1s"></i><i style="--x:73%;--d:9s;--s:4px;--t:-9s"></i><i style="--x:29%;--d:15s;--s:8px;--t:-12s"></i><i style="--x:43%;--d:15s;--s:8px;--t:-5s"></i><i style="--x:41%;--d:11s;--s:5px;--t:-11s"></i><i style="--x:34%;--d:9s;--s:6px;--t:-8s"></i><i style="--x:66%;--d:13s;--s:8px;--t:-4s"></i><i style="--x:80%;--d:9s;--s:4px;--t:-8s"></i></div>
+      <div class="sv-hero-in">
+        <div class="sv-hero-copy"><h1>TOKO MINECRAFT<br>DIGITAL</h1><p>Semua kebutuhan Minecraft ada di sini.</p><a class="sv-cta" href="#produk">BELI SEKARANG ›</a></div>
+        <div class="sv-stats"><div><b>5.0★</b><small>Rating</small></div><div><b>24/7</b><small>Order otomatis</small></div><div><b>QRIS</b><small>Bayar instan</small></div></div>
+      </div>
+    </section>
+    <div class="sv-promo">✦ Promo launch ZayyStore — diskon 20% untuk produk pilihan, pakai kode <strong>ZAYY20</strong></div>
+    <section class="sv-section" id="produk">
+      <div class="sv-head"><span class="sv-pill">PRODUK TERLARIS</span><h2>Pilih produkmu</h2></div>
+      <div class="sv-tabs"><button class="filter sv-tab active" data-filter="all"><i>▦</i>Semua</button><button class="filter sv-tab" data-filter="account"><i>⛏️</i>Akun</button><button class="filter sv-tab" data-filter="server"><i>🏞️</i>Server</button><button class="filter sv-tab" data-filter="topup"><i>🪙</i>Top Up</button></div>
+      <div class="product-grid" id="productGrid">
+<article class="product-card sv-card" data-category="account"><div class="sv-img g-account"><span class="sv-tag">♛ PILIHAN ZAYYSTORE</span><span class="sv-off">POPULER</span><img class="sv-photo-bg" src="img/java-bedrock.jpg" alt="" aria-hidden="true"><img class="sv-photo" src="img/java-bedrock.jpg" alt="Minecraft Java & Bedrock Edition" loading="lazy"></div><div class="sv-body"><span class="sv-cat green">◆ Minecraft Premium</span><h3>Minecraft Java & Bedrock</h3><p>Akun original • Detail lengkap</p><div class="sv-meta"><span class="sv-fast instan"><u>⚡</u><b>PROSES<br>INSTAN</b></span><span class="sv-rate">★ 5.0</span><span class="sv-sep">|</span><span>Produk digital</span></div><div class="sv-price"><strong>Rp 89.000</strong></div><button class="add-cart sv-buy" data-id="acc-java" aria-label="Tambah Minecraft Java & Bedrock ke keranjang" data-name="Minecraft Java & Bedrock" data-price="89000">🛒 Beli Sekarang</button></div></article>
+<article class="product-card sv-card" data-category="server" id="server"><div class="sv-img g-server"><span class="sv-off">SERVER</span><div class="sv-art"><svg viewBox="0 0 200 160" aria-hidden="true"><polygon points="50,59 100,88 100,146 50,117" fill="#a8703d"/><polygon points="100,88 150,59 150,117 100,146" fill="#8a5a2e"/><polygon points="50,59 100,88 100,104 50,75" fill="#4fb83c"/><polygon points="100,88 150,59 150,75 100,104" fill="#43a533"/><polygon points="100,30 150,59 100,88 50,59" fill="#6ee05a"/><polygon points="100,30 150,59 150,117 100,146 50,117 50,59" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M50 59L100 88L150 59M100 88V146" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><polygon points="100,92 100,92 100,92 100,92" fill="#0000"/><polygon points="100,92 100,92 100,92 100,92" fill="#0000"/><polygon points="100,92 100,92 100,92 100,92" fill="#0000"/><polygon points="100,92 100,92 100,92 100,92 100,92 100,92" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M100 92L100 92L100 92M100 92V92" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><ellipse cx="100" cy="150" rx="62" ry="8" fill="#0a3f7a" opacity=".35"/><polygon points="27,76 48,88 48,112 27,100" fill="#a8703d"/><polygon points="48,88 69,76 69,100 48,112" fill="#8a5a2e"/><polygon points="27,76 48,88 48,95 27,83" fill="#4fb83c"/><polygon points="48,88 69,76 69,83 48,95" fill="#43a533"/><polygon points="48,64 69,76 48,88 27,76" fill="#6ee05a"/><polygon points="48,64 69,76 69,100 48,112 27,100 27,76" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M27 76L48 88L69 76M48 88V112" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><rect x="148" y="58" width="8" height="34" fill="#7a4a22" stroke="#17335f" stroke-width="3"/><circle cx="152" cy="50" r="10" fill="#ffb02e" stroke="#17335f" stroke-width="3"/><path d="M24 13L26.5 19.5L33 22L26.5 24.5L24 31L21.5 24.5L15 22L21.5 19.5Z" fill="#fff"/><path d="M178 16L180.2 21.8L186 24L180.2 26.2L178 32L175.8 26.2L170 24L175.8 21.8Z" fill="#fff"/></svg><b>YOUR<br>OWN WORLD</b></div></div><div class="sv-body"><span class="sv-cat blue">▤ Hosting Server</span><h3>Server Minecraft 1GB</h3><p>Java • Setup mudah</p><div class="sv-meta"><span class="sv-fast fast"><u>⚡</u><b>PEMBUATAN<br>CEPAT</b></span><span class="sv-rate">★ 5.0</span><span class="sv-sep">|</span><span>Produk digital</span></div><div class="sv-price"><strong>Rp 15.000</strong></div><button class="add-cart sv-buy" data-id="srv-1gb" aria-label="Tambah Server Minecraft 1GB ke keranjang" data-name="Server Minecraft 1GB" data-price="15000">🛒 Beli Sekarang</button></div></article>
+<article class="product-card sv-card" data-category="server"><div class="sv-img g-premium"><span class="sv-tag">♛ PILIHAN ZAYYSTORE</span><span class="sv-off">BEST VALUE</span><div class="sv-art"><svg viewBox="0 0 200 160" aria-hidden="true"><polygon points="48,56 100,86 100,146 48,116" fill="#3b2a78"/><polygon points="100,86 152,56 152,116 100,146" fill="#2c1f5c"/><polygon points="48,56 100,86 100,103 48,73" fill="#a78bfa"/><polygon points="100,86 152,56 152,73 100,103" fill="#8b5cf6"/><polygon points="100,26 152,56 100,86 48,56" fill="#8b5cf6"/><polygon points="100,26 152,56 152,116 100,146 48,116 48,56" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M48 56L100 86L152 56M100 86V146" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><rect x="82" y="86" width="36" height="44" rx="4" fill="#c58bff" stroke="#17335f" stroke-width="3"/><polygon points="15,88 36,100 36,124 15,112" fill="#4b3a92"/><polygon points="36,100 57,88 57,112 36,124" fill="#382a72"/><polygon points="36,76 57,88 36,100 15,88" fill="#a78bfa"/><polygon points="36,76 57,88 57,112 36,124 15,112 15,88" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M15 88L36 100L57 88M36 100V124" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><polygon points="147,81 166,92 166,114 147,103" fill="#4b3a92"/><polygon points="166,92 185,81 185,103 166,114" fill="#382a72"/><polygon points="166,70 185,81 166,92 147,81" fill="#a78bfa"/><polygon points="166,70 185,81 185,103 166,114 147,103 147,81" fill="none" stroke="#17335f" stroke-width="4" stroke-linejoin="round"/><path d="M147 81L166 92L185 81M166 92V114" fill="none" stroke="#17335f" stroke-width="3" stroke-linejoin="round"/><path d="M22 15L24.5 21.5L31 24L24.5 26.5L22 33L19.5 26.5L13 24L19.5 21.5Z" fill="#fff"/><path d="M180 22L182.2 27.8L188 30L182.2 32.2L180 38L177.8 32.2L172 30L177.8 27.8Z" fill="#fff"/><path d="M104 5L106.0 10.0L111 12L106.0 14.0L104 19L102.0 14.0L97 12L102.0 10.0Z" fill="#fff"/></svg><b>PREMIUM<br>SERVER</b></div></div><div class="sv-body"><span class="sv-cat purple">▤ Hosting Server</span><h3>Server Minecraft 2GB</h3><p>Untuk teman mabar</p><div class="sv-meta"><span class="sv-fast fast"><u>⚡</u><b>PEMBUATAN<br>CEPAT</b></span><span class="sv-rate">★ 5.0</span><span class="sv-sep">|</span><span>Produk digital</span></div><div class="sv-price"><strong>Rp 25.000</strong></div><button class="add-cart sv-buy" data-id="srv-2gb" aria-label="Tambah Server Minecraft 2GB ke keranjang" data-name="Server Minecraft 2GB" data-price="25000">🛒 Beli Sekarang</button></div></article>
+<article class="product-card sv-card" data-category="topup" id="topup"><div class="sv-img g-coins"><span class="sv-off">TOP UP</span><img class="sv-photo-bg" src="img/minecoins.webp" alt="" aria-hidden="true"><img class="sv-photo" src="img/minecoins.webp" alt="Minecraft Minecoins" loading="lazy"></div><div class="sv-body"><span class="sv-cat coin">Ⓜ Minecoins</span><h3>Minecraft Coins Pack</h3><p>Paket coins pilihan</p><div class="sv-meta"><span class="sv-fast instan"><u>⚡</u><b>PROSES<br>INSTAN</b></span><span class="sv-rate">★ 5.0</span><span class="sv-sep">|</span><span>Produk digital</span></div><div class="sv-price"><strong>Rp 49.000</strong></div><button class="add-cart sv-buy" data-id="coins" aria-label="Tambah Minecraft Coins Pack ke keranjang" data-name="Minecraft Coins Pack" data-price="49000">🛒 Beli Sekarang</button></div></article>
+<article class="product-card sv-card" data-category="account"><div class="sv-img g-rank"><span class="sv-off">RANK</span><div class="sv-art"><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M34 118L26 52l42 32 32-48 32 48 42-32-8 66z" fill="#ffcf2e" stroke="#17335f" stroke-width="5" stroke-linejoin="round"/><rect x="34" y="118" width="132" height="22" rx="4" fill="#f5a800" stroke="#17335f" stroke-width="5"/><circle cx="100" cy="94" r="9" fill="#ff3d71" stroke="#17335f" stroke-width="3"/><circle cx="64" cy="126" r="0" /><circle cx="70" cy="129" r="5" fill="#3de0ff"/><circle cx="130" cy="129" r="5" fill="#3de0ff"/><circle cx="100" cy="129" r="5" fill="#ff3d71"/><circle cx="26" cy="52" r="7" fill="#fff" stroke="#17335f" stroke-width="3"/><circle cx="100" cy="36" r="7" fill="#fff" stroke="#17335f" stroke-width="3"/><circle cx="174" cy="52" r="7" fill="#fff" stroke="#17335f" stroke-width="3"/><path d="M20 11L22.5 17.5L29 20L22.5 22.5L20 29L17.5 22.5L11 20L17.5 17.5Z" fill="#fff"/><path d="M182 16L184.2 21.8L190 24L184.2 26.2L182 32L179.8 26.2L174 24L179.8 21.8Z" fill="#fff"/></svg><b>VIP<br>RANK</b></div></div><div class="sv-body"><span class="sv-cat gold">♛ Rank Premium</span><h3>VIP Rank [30 Hari]</h3><p>Untuk server pilihan</p><div class="sv-meta"><span class="sv-fast instan"><u>⚡</u><b>PROSES<br>INSTAN</b></span><span class="sv-rate">★ 5.0</span><span class="sv-sep">|</span><span>Produk digital</span></div><div class="sv-price"><strong>Rp 20.000</strong></div><button class="add-cart sv-buy" data-id="rank-vip" aria-label="Tambah VIP Rank 30 Hari ke keranjang" data-name="VIP Rank 30 Hari" data-price="20000">🛒 Beli Sekarang</button></div></article>
+      </div>
+    </section>
+    <section class="sv-section" id="cara">
+      <div class="sv-head"><span class="sv-pill">ORDER OTOMATIS 24/7</span><h2>Cara belanja</h2></div>
+      <div class="how-grid">
+        <div class="how-card"><i>1</i><b>Pilih produk</b><small>Tambahkan ke keranjang, pakai kode promo kalau ada.</small></div>
+        <div class="how-card"><i>2</i><b>Isi data</b><small>Cukup email (dan username Minecraft bila perlu).</small></div>
+        <div class="how-card"><i>3</i><b>Scan QRIS</b><small>Bayar dari e-wallet atau m-banking apa pun.</small></div>
+        <div class="how-card"><i>4</i><b>Terima otomatis</b><small>Detail produk muncul langsung &amp; dikirim ke email.</small></div>
+      </div>
+    </section>
+    <section class="newsletter"><div class="news-icon">✉</div><div><h3>Jangan ketinggalan update!</h3><p>Dapatkan info produk dan promo terbaru dari ZayyStore.</p></div><form id="newsletterForm"><input type="email" placeholder="Masukkan email kamu" required/><button class="primary-btn">Gabung <span>→</span></button></form></section>
+  </main>
+  <footer class="sv-footer"><div class="sv-foot-grid">
+    <div><a class="sv-brand" href="#home"><span class="brand-mark">Z</span><b>ZAYYSTORE</b></a><p>Toko Minecraft digital: akun, server, coins, dan rank dengan pembayaran QRIS otomatis.</p></div>
+    <div><h4>Kategori</h4><a href="#produk">Semua Produk</a><a href="#server">Server Minecraft</a><a href="#topup">Top Up</a></div>
+    <div><h4>Support</h4><a href="#cara">Cara Pembelian</a><a href="#" id="footerOrders">Cek Pesanan</a><a href="https://wa.me/62XXXXXXXXXXX" target="_blank" rel="noopener">WhatsApp Admin</a></div>
+    <div><h4>Pembayaran</h4><div class="payment-pills"><span>QRIS</span><span>GoPay</span><span>OVO</span><span>DANA</span><span>ShopeePay</span><span>m-Banking</span></div></div>
+  </div><div class="sv-foot-bottom">© 2026 ZayyStore. Semua hak dilindungi.</div></footer>
+  <a class="wa-float" href="https://wa.me/62XXXXXXXXXXX" target="_blank" rel="noopener">💬 Tanya Admin</a>
+  <div class="toast" id="toast"></div>
+  <div class="overlay" id="cartOverlay"><aside class="cart-drawer"><div class="drawer-head"><div><span class="section-kicker">KERANJANG KAMU</span><h2>Keranjang <span>belanja</span></h2></div><button id="cartClose" class="close-btn">×</button></div><div id="cartItems" class="cart-items"><div class="empty-cart">🛒<b>Keranjang masih kosong</b><small>Tambahkan produk yang kamu suka.</small></div></div><div class="cart-total">
+        <form class="coupon" id="couponForm" autocomplete="off"><input id="couponInput" placeholder="Punya kode promo? mis. ZAYY20" maxlength="20" aria-label="Kode promo"/><button type="submit">Pakai</button></form>
+        <div class="sum-row"><span>Subtotal</span><b id="cartSubtotal">Rp 0</b></div>
+        <div class="sum-row discount" id="discountRow" hidden><span>Diskon <em id="couponLabel"></em> <button type="button" id="couponRemove" aria-label="Hapus kode promo">×</button></span><b id="cartDiscount">-Rp 0</b></div>
+        <div class="sum-row total"><span>Total</span><strong id="cartTotal">Rp 0</strong></div>
+        <button id="checkoutBtn" class="primary-btn full">Lanjut ke pembayaran →</button>
+        <small>🔒 Bayar aman via QRIS • Produk dikirim otomatis</small>
+      </div>
+  </aside></div>
+  <div class="modal-overlay" id="loginModal"><div class="modal"><button class="close-btn modal-close" id="loginClose">×</button><div class="modal-logo">Z</div><span class="section-kicker">WELCOME BACK</span><h2>Masuk ke <span>ZayyStore</span></h2><p>Member area akan membantu kamu mengelola pesanan.</p><form id="loginForm"><label>Email</label><input type="email" placeholder="nama@email.com" required/><label>Password</label><input type="password" placeholder="Masukkan password" required/><button class="primary-btn full">Masuk <span>→</span></button></form><small class="demo-note">Login demo saja — autentikasi belum terhubung.</small></div></div>
+
+  <div class="modal-overlay" id="checkoutModal" aria-hidden="true"><div class="modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button class="close-btn modal-close" id="checkoutClose" aria-label="Tutup">×</button>
+    <ol class="co-steps" id="coSteps"><li class="on" data-s="1"><i>1</i>Data</li><li data-s="2"><i>2</i>Bayar</li><li data-s="3"><i>3</i>Selesai</li></ol>
+
+    <section id="stepDetails">
+      <span class="section-kicker">CHECKOUT</span><h2 id="coTitle">Lengkapi <span>pesananmu</span></h2>
+      <div class="co-summary" id="coSummary"></div>
+      <form id="checkoutForm" novalidate>
+        <label for="coEmail">Email <small>(bukti & detail pesanan dikirim ke sini)</small></label>
+        <input id="coEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nama@email.com" required/>
+        <div id="coUserWrap" hidden><label for="coUser">Username Minecraft</label>
+        <input id="coUser" name="username" autocomplete="off" placeholder="mis. Steve_123" maxlength="24"/></div>
+        <p class="form-error" id="coError" role="alert" hidden></p>
+        <button class="primary-btn full" id="coSubmit" type="submit"><span>Bayar dengan QRIS</span> <b>→</b></button>
+        <small class="demo-note">Dengan membayar, kamu menyetujui Syarat & Ketentuan ZayyStore. Produk digital tidak dapat dikembalikan setelah dikirim.</small>
+      </form>
+    </section>
+
+    <section id="stepPay" hidden>
+      <span class="section-kicker">SCAN & BAYAR</span><h2>Selesaikan <span>pembayaran</span></h2>
+      <div class="pay-grid">
+        <div class="qr-box"><div class="qr-frame"><img id="qrImg" alt="QRIS pembayaran" width="260" height="260"/><div class="qr-loading" id="qrLoading"><i></i></div></div>
+          <div class="qr-brand"><b>QRIS</b><small>Semua e-wallet & m-banking</small></div></div>
+        <div class="pay-info">
+          <div class="pay-amount"><small>Total yang harus dibayar</small><strong id="payAmount">Rp 0</strong><button type="button" class="copy-btn" id="copyAmount">Salin nominal</button></div>
+          <p class="pay-note">⚠ Bayar sesuai nominal <b>persis</b> (termasuk 3 digit terakhir) agar terdeteksi otomatis.</p>
+          <div class="pay-timer"><span>Berlaku</span><b id="payTimer">--:--</b></div>
+          <ul class="pay-steps"><li>Buka aplikasi e-wallet / m-banking</li><li>Pilih <b>Scan QR</b> lalu arahkan ke kode di samping</li><li>Konfirmasi — halaman ini otomatis berubah saat lunas</li></ul>
+          <div class="pay-status"><span class="spinner"></span><span id="payStatusText">Menunggu pembayaran…</span></div>
+          <div class="pay-meta"><span>ID Pesanan</span><b id="payOrderId">-</b></div>
+        </div>
+      </div>
+      <div class="sandbox-box" id="sandboxBox" hidden><span>🧪 Mode sandbox</span><button type="button" class="secondary-btn" id="simulateBtn">Simulasikan pembayaran berhasil</button></div>
+      <button type="button" class="link-btn" id="payClose">Tutup — pesanan tetap tersimpan di “Pesanan Saya”</button>
+    </section>
+
+    <section id="stepDone" hidden>
+      <div class="done-icon" id="doneIcon">✓</div>
+      <h2 id="doneTitle">Pembayaran <span>berhasil!</span></h2>
+      <p class="done-sub" id="doneSub"></p>
+      <div id="deliveryList" class="delivery-list"></div>
+      <div class="done-actions"><button type="button" class="primary-btn" id="doneAgain">Belanja lagi</button></div>
+    </section>
+
+    <section id="stepEnd" hidden>
+      <div class="done-icon warn" id="endIcon">⌛</div>
+      <h2 id="endTitle">Waktu pembayaran <span>habis</span></h2>
+      <p class="done-sub" id="endSub">QR sudah tidak berlaku. Jangan bayar ke QR lama — buat pesanan baru.</p>
+      <div class="done-actions"><button type="button" class="primary-btn" id="endRetry">Buat pesanan baru</button></div>
+    </section>
+  </div></div>
+
+  <div class="modal-overlay" id="ordersModal" aria-hidden="true"><div class="modal orders-modal" role="dialog" aria-modal="true" aria-labelledby="ordTitle">
+    <button class="close-btn modal-close" id="ordersClose" aria-label="Tutup">×</button>
+    <span class="section-kicker">RIWAYAT DI PERANGKAT INI</span><h2 id="ordTitle">Pesanan <span>saya</span></h2>
+    <div id="ordersList" class="orders-list"></div>
+    <small class="demo-note">Riwayat tersimpan di browser ini. Detail pesanan juga dikirim ke email kamu setelah lunas.</small>
+  </div></div>
+  <script src="script.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
